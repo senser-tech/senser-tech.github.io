@@ -25,13 +25,13 @@ read -r myEKSCluster
 
 validate $myEKSCluster
 
-asg=$(aws autoscaling describe-auto-scaling-groups --query "AutoScalingGroups[*].Tags[?Value=='${myEKSCluster}'].{ResourceId:ResourceId}" --output text)
+asg=$(aws eks list-nodegroups --cluster-name ${myEKSCluster} --query "nodegroups" --output text)
 if [ -z "$asg" ] 
 then
     echo "Did not find the cluster:  $myEKSCluster. Please enter a valid EKS cluster name"
 else
     echo "Stopping your EKS cluster $myEKSCluster"
-    for i in $(aws autoscaling describe-auto-scaling-groups --query "AutoScalingGroups[*].Tags[?Value=='${myEKSCluster}'].{ResourceId:ResourceId}" --output text)
+    for i in $(aws eks list-nodegroups --cluster-name ${myEKSCluster} --query "nodegroups" --output text)
     do
         : 
         echo "Setting Auto Scaling Group: $i. Desired capacity to 0"

@@ -83,7 +83,7 @@ az group create --name $MyResourceGroup --location $RESOURCEGROUPLOCATION
 
 # Create the cluster
 create_cluster "database" 1 120
-
+# Add the nodepools
 add_nodepool "backend" 2 32
 add_nodepool "workload" 4 32
 

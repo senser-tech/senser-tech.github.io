@@ -9,7 +9,6 @@ function validate()
         echo "Please enter a valid cluster name"
         exit 1
     fi
-    esac
 }
 ##############
 #   Main     #
@@ -19,17 +18,18 @@ read -r myEKSCluster
 
 validate $myEKSCluster
 
-asg=$(aws autoscaling describe-auto-scaling-groups --query "AutoScalingGroups[*].Tags[?Value=='${myEKSCluster}'].{ResourceId:ResourceId}" --output text)
+asg=$(aws eks list-nodegroups --cluster-name ${myEKSCluster} --query "nodegroups" --output text)
 if [ -z "$asg" ]
 then
     echo "Please enter a valid EKS cluster name"
 else
-    echo "Strating your EKS cluster $myEKSCluster"
-    for i in $(aws autoscaling describe-auto-scaling-groups --query "AutoScalingGroups[*].Tags[?Value=='${myEKSCluster}'].{ResourceId:ResourceId}" --output text)
+    echo "Starting your EKS cluster $myEKSCluster"
+    for i in $(aws eks list-nodegroups --cluster-name ${myEKSCluster} --query "nodegroups" --output text)
     do
         : 
-        maxSize=$(aws autoscaling describe-auto-scaling-groups --auto-scaling-group-name $i --query "AutoScalingGroups[].MaxSize" --output text)
+        maxSize=$(aws eks describe-nodegroup --cluster-name ${myEKSCluster} --nodegroup-name $i --query "nodegroup.scalingConfig.maxSize" --output text)
         echo "Setting Auto Scaling Group: $i. Desired capacity to" $maxSize
+
         aws autoscaling set-desired-capacity \
         --auto-scaling-group-name $i \
         --desired-capacity $maxSize
