@@ -29,6 +29,6 @@ if [ -z "$myResourceGroup" ]
 then
     echo "Please enter a valid AKS cluster name"
 else
-    echo "Strating your AKS cluster $myAKSCluster, in Resource Group, $myResourceGroup"
+    echo "Starting your AKS cluster $myAKSCluster, in Resource Group, $myResourceGroup"
     az aks start --name $myAKSCluster --resource-group $myResourceGroup
 fi

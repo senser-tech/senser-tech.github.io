@@ -35,8 +35,9 @@ else
     do
         : 
         echo "Setting Auto Scaling Group: $i. Desired capacity to 0"
-        aws autoscaling set-desired-capacity \
-        --auto-scaling-group-name $i \
-        --desired-capacity 0
+        aws eks update-nodegroup-config \
+        --cluster-name $myEKSCluster \
+        --nodegroup-name $i \
+        --scaling-config desiredSize=0
     done
 fi

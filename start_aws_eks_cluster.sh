@@ -30,8 +30,10 @@ else
         maxSize=$(aws eks describe-nodegroup --cluster-name ${myEKSCluster} --nodegroup-name $i --query "nodegroup.scalingConfig.maxSize" --output text)
         echo "Setting Auto Scaling Group: $i. Desired capacity to" $maxSize
 
-        aws autoscaling set-desired-capacity \
-        --auto-scaling-group-name $i \
-        --desired-capacity $maxSize
+        echo "Setting Node Group: $i. Desired capacity to 0"
+        aws eks update-nodegroup-config \
+        --cluster-name $myEKSCluster \
+        --nodegroup-name $i \
+        --scaling-config desiredSize=$maxSize
     done
 fi
