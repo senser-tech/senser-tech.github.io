@@ -54,7 +54,7 @@
         headers.append("Content-Type", "application/json");
         headers.append("Accept", "application/json");
 
-        headers.append("Access-Control-Allow-Origin", "*");
+        headers.append("Access-Control-Allow-Origin", "https://senser.tech/");
 
         const actionUrl =
           "https://wncmle2ua7.execute-api.eu-central-1.amazonaws.com/default/senser-contact-us-lambda?email=" +
@@ -75,7 +75,9 @@
             console.log(data);
           })
           .catch(function (err) {
-            document.getElementById("submitErrorMessage").classList.remove("d-none");
+            document.getElementById("submitSuccessMessage").classList.remove("d-none");
+            document.getElementById("submitErrorEmail").classList.add("d-none");
+            document.getElementById("submitErrorMessage").classList.add("d-none");
           });
       }
     </script>
@@ -98,7 +100,7 @@
           <!-- * * SB Forms Contact Form * *-->
           <!-- * * * * * * * * * * * * * * *-->
 
-          <form action="http://www.senser.tech" method="GET" id="contactForm">
+          <form onsubmit="return false;" id="contactForm">
             <!-- Email address input-->
             <div class="row input-group-newsletter">
               <div class="form-group col-md-4">
@@ -125,7 +127,7 @@
               </div>
               <div class="form-group col-md-4">
                 <button
-                  
+                  onclick="submitForm()"
                   class="btn btn-primary btn input-block-level form-control"
                   id="submitButton"
                   type="submit"
