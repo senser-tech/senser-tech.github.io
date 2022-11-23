@@ -1,0 +1,149 @@
+/* XL Device :1200px. */
+
+@media (min-width: 1200px) and (max-width: 1449px) {
+    .contact__inner__blk h4 {
+        font-size: 25px;
+    }
+
+}
+
+
+/* LG Device :992px. */
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .contact__inner__blk h4 {
+        font-size: 25px;
+    }
+
+    .service__content h3 {
+        font-size: 42px;
+    }
+}
+
+
+/* MD Device :768px. */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .service__content {
+        text-align: center;
+    }
+
+    .contact__wrapper {
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+
+    .contact__inner__blk h4 {
+        font-size: 25px;
+    }
+
+    .service__content h3 {
+        font-size: 42px;
+    }
+
+    .service__content p {
+        font-size: 17px;
+    }
+}
+
+
+/* SM Small Device :320px. */
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .contact__wrapper {
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+
+    .site_shape_2 {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .site_shape_1 {
+        display: none;
+    }
+
+    .service__content {
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .contact__wrapper {
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+
+    .contact__inner__blk h4 {
+        font-size: 25px;
+    }
+
+    .service__content h3 {
+        font-size: 34px;
+    }
+
+    .service__content p {
+        font-size: 16px;
+    }
+
+    .site__logo {
+        text-align: center;
+    }
+
+    .header__area {
+        padding-top: 10px;
+    }
+
+    .site__logo img {
+        height: 24px;
+    }
+
+    .service__accordion__btn .accordion-button h4 {
+        margin: 0;
+    }
+
+    .service__accordion__btn .accordion-button {
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+
+    .service__accordion__btn .accordion-collapse {
+        padding: 20px;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .service__accordion__btn {
+        border-bottom: 1px solid #dddd;
+    }
+
+    .service__accordion {
+        display: block;
+        margin-top: 20px;
+    }
+
+    .service__box__wrapper {
+        display: none;
+    }
+
+    .thumb_1 {
+        display: none;
+    }
+
+    .thumb_2 {
+        display: block;
+    }
+
+    .service__thumb {
+        max-width: 480px;
+        margin: 0 auto;
+    }
+}
+
+
+/* SM Small Device :550px. */
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {}

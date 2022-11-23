@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Base CSS */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.alignleft {
+    float: left;
+    margin-right: 15px;
+}
+
+.alignright {
+    float: right;
+    margin-left: 15px;
+}
+
+.aligncenter {
+    display: block;
+    margin: 0 auto 15px;
+}
+
+a:focus {
+    outline: 0 solid
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 15px;
+    color: #07171D;
+}
+
+body {
+    color: #07171D;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+}
+
+.selector-for-some-widget {
+    box-sizing: content-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+a:hover {
+    text-decoration: none
+}
+
+a,
+button,
+input,
+textarea {
+    outline: none !important;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+/* ----------------------- service content start*/
+
+.header__area .container {
+    max-width: 1800px;
+}
+
+.service__area .container {
+    max-width: 1400px;
+}
+
+.service__content h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 120%;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.service__content p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    color: #333333;
+}
+
+.service__thumb img {
+    width: 100%;
+}
+
+.service__inner__box h4 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.service__inner__box p {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 130%;
+    color: #333333;
+}
+
+.service__inner__box h4 span {
+    color: #197DFF;
+}
+
+.service__content h3 span {
+    color: #197DFF;
+}
+
+.service__box__wrapper {
+    margin-top: 40px;
+}
+
+.service__area {
+    padding-bottom: 50px;
+}
+
+.service__content {
+    padding-top: 35px;
+}
+
+.header__area {
+    padding-top: 35px;
+}
+
+.contact__inner__blk form {
+    background: #FFFFFF;
+    box-shadow: 4px 4px 30px rgba(0, 9, 0, 0.1);
+    border-radius: 15px;
+    padding: 48px 32px;
+}
+
+.contact__inner__blk input {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    color: #A0A0A0;
+    background: #F7F7F7;
+    border: 1px solid #D0CFCF;
+    border-radius: 4px;
+    padding: 15px 16px;
+    margin-bottom: 18px;
+}
+
+.contact__inner__blk button {
+    background: #197DFF;
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    color: #FFFFFF;
+    padding: 15px;
+}
+
+.contact__wrapper {
+    max-width: 386px;
+    margin-left: auto;
+    margin-top: 35px;
+}
+
+.form-control:focus {
+    box-shadow: unset;
+}
+
+.site_shape_1 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.contact__inner__blk h4 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    color: #333333;
+    margin-bottom: 30px;
+    line-height: 1;
+}
+
+.contact__inner__blk h4 span {
+    color: #197DFF;
+}
+
+.site_shape_2 {
+    display: none;
+}
+
+.service__accordion {
+    display: none;
+}
+
+.thank__you__content {
+    background: #FFFFFF;
+    box-shadow: 4px 4px 30px rgba(0, 9, 0, 0.1);
+    border-radius: 15px;
+    padding: 48px 32px;
+}
+
+.thank__you__content h4 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 120%;
+    text-align: center;
+    color: #333333;
+    margin: 0;
+}
+
+.thank__you__content p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: #333333;
+    margin-bottom: 25px;
+}
+.thank_you_thumb {
+	text-align: center;
+}.thumb_2 {
+	display: none;
+}
+/* ----------------------- service content end*/
